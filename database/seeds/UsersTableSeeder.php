@@ -17,6 +17,8 @@ class UsersTableSeeder extends Seeder
             'email' => 'bry@bry.com',
             'imageFileName' => 'bry.jpg',
             'password' => bcrypt('brybry'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }

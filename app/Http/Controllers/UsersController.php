@@ -10,7 +10,7 @@ class UsersController extends Controller
 {
     public function index() {
 
-        $users = User::all();
+        $users = User::where('systemID', app('system')->id)->get();
         return view('users.index', compact('users'));
 
     }
@@ -25,6 +25,7 @@ class UsersController extends Controller
         $newUser = User::create([
             'name' => $request['name'],
             'email' => $request['email'],
+            'systemID' => app('system')->id,
             'password' => bcrypt($request['password']),
             'imageFileName' => $request['imageFileName'],
             'created_at' => Carbon::now()->toDateTimeString(),

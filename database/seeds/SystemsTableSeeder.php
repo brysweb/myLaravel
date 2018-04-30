@@ -13,7 +13,8 @@ class SystemsTableSeeder extends Seeder
     {
         DB::table('systems')->insert([
             'id' => 1,
-            'name' => 'Community Garder',
+            'name' => 'Community Garden',
+            'imageFileName' => '/img/default.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

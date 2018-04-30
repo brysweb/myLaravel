@@ -44,8 +44,13 @@
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
-                        <li><a class="nav-link" href="/about">{{ __('About') }}</li>
-                        <li><a class="nav-link" href="{{ route('users') }}">{{ __('Users') }}</a></li>
+                        <li><a class="nav-link" href="/about">{{ __('About') }}</a></li>
+                        <li><a class="nav-link" href="/rooms">{{ __('Room') }}</a></li>
+                        <li><a class="nav-link" href="/users">{{ __('Users') }}</a></li>
+                        <li><a class="nav-link" href="/plants">{{ __('Plants') }}</a></li>
+                        <li><a class="nav-link" href="/planttypes">{{ __('Plant Type') }}</a></li>
+                        <li><a class="nav-link" href="/notes">{{ __('Notes') }}</a></li>
+                        <li><a class="nav-link" href="/systems/edit/{{app('system')->id}}">{{ __('System') }}</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
